@@ -11,9 +11,8 @@ function App() {
           <img src={rose} className="Rose rotates" alt="logo" />
           <img src={centre_text} className="Rose rotates" alt="logo" />
       </header>
-        <footer className="App-footer gradient">
-            <div>Software Developer -
-            Melbourne, Australia</div>
+        <footer className="App-footer">
+            <div>Software Developer</div>
             <div className="footer-right">
                 {/*eslint-disable-next-line*/}
                 <a href="https://twitter.com/Maveritan" className="socicon-twitter social"/>
