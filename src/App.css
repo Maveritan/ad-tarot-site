@@ -1,20 +1,47 @@
 .App {
   text-align: center;
+  background-color: #0032a0;
 }
 
-.App-logo {
-  height: 40vmin;
+.gradient{
+  background-color: #C9C6C6;
+  background-image: linear-gradient(225deg, #2D3436 0%, #F1F2F6 74%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.Rose {
+  background-color: #C9C6C6;
+  background-image: linear-gradient(225deg, #2D3436 0%, #F1F2F6 74%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  mask: url(centre_rose.svg);
+  mask-size: 100% 100%;
+  position: absolute;
+  margin: auto;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.rotates{
+  animation: Rose-spin-back 1 1s;
+}
+@media (prefers-reduced-motion: no-preference) and (orientation: portrait) {
+  .rotates {
+    animation: Rose-spin 1 1s;
+    transform: rotate(90deg);
+  }
+}
+@media (max-aspect-ratio: 9/16){
+  .rotates{
+    width:auto;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +51,40 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.75vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+.footer-right{
+  flex:50%;
+  text-align:right;
+}
+.social{
+  margin-right:5pt;
 }
 
-@keyframes App-logo-spin {
+@keyframes Rose-spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(90deg);
   }
 }
+@keyframes Rose-spin-back {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
